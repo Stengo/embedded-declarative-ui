@@ -10,7 +10,7 @@ pub fn derive_view(input: TokenStream) -> TokenStream {
     let (impl_generics, ty_generics, where_clause) = input.generics.split_for_impl();
 
     let expanded = quote! {
-        impl #impl_generics crate::View<Color> for #name #ty_generics #where_clause 
+        impl #impl_generics embedded_declarative_ui::view::View<Color> for #name #ty_generics #where_clause 
         where 
             Color: embedded_graphics::pixelcolor::PixelColor,
         {
