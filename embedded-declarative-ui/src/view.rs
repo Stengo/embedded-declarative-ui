@@ -26,3 +26,10 @@ where
         (**self).size(available_size).await
     }
 }
+
+pub trait CompositeView<Color>
+where
+    Color: embedded_graphics::pixelcolor::PixelColor,
+{
+    async fn body(&self) -> impl View<Color>;
+}
