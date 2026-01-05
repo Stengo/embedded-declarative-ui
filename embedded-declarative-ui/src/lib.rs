@@ -4,6 +4,7 @@
 pub mod alignment;
 pub mod background;
 pub mod border;
+pub mod conditional;
 pub mod draw_target;
 pub mod frame;
 pub mod hstack;
